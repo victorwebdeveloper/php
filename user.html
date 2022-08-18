@@ -1,0 +1,229 @@
+<html>
+<head>
+<style>
+.container {
+    display:grid;
+    
+    grid-template-columns:1fr 1fr ;
+    grid-template-rows:0.2fr 0.2fr 0.1fr 0.4fr 0.4 0.4fr;
+    grid-template-areas:
+    "main main"
+    "nav nav"
+    "wrapbody wrapbody"
+    "sidebar content"
+    "footer footer";
+    grid-gap:0.2rem;
+    font-family: "inter", sans-serif;
+    font-weight: 300;
+            
+            font-size:15px;
+            color:#004d40;
+            text-align:center;
+     }
+main{
+        background-color: #285d94;
+        grid-area:main;
+     }
+nav{
+        background-color: #0b366a;
+        grid-area:nav;
+       
+     }
+wrapbody{
+        background-color: #ffffff;
+        grid-area:wrapbody;
+     }
+sidebar {
+        background-color: #f7f6f3;
+        grid-area:sidebar;
+        height:100%;
+     }
+content {
+        background-color: #f7f6f3;
+        grid-area:content;
+     }
+footer {
+        background-color: #f7f6f3;
+        grid-area:footer;
+     }
+     .icon-bar {
+    width: 100%;
+    
+    overflow: auto;
+}
+main img {height:60px}
+main button {float:right; margin: 12px 50px;}
+.icon-bar a {
+    float: left;
+    
+    text-align: center;
+    padding: 12px 5px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size:12px;
+    text-decoration: none;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+}
+
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+   
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 18px 20px;
+    text-decoration: none;
+    margin-left: 10px;
+    
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+wrapbody p {
+    display:block;
+    float:left;
+    padding-left: 25px;
+}
+.mysidebar {
+    float:left;
+    padding-left: 15%;
+}
+.mysidebar p {padding-right:65%;color:black}
+#mysidebarcontent {background-color: #fff;width:630px}
+#mysidebarcontent h3 {font-size: 15px;color:black;height:16vh;padding-right: 40%;}
+#mysidebarcontent h4 {padding-left: 55%;color:black;font-weight: 100;font-size: 12px;}
+
+#mysidebarcontent1 {background-color: #13417e;width:630px;border-radius: 10px;height:12vh;line-height: 1px;}
+#mysidebarcontent1 h2 {color:white;font-size:15px;padding-right: 80%;padding-top:5%}
+#mysidebarcontent1 h5 {color:white;font-size:12px;padding-right: 80%;padding-top:0%}
+.alignright  {padding-left:65%;}
+.alignright p {color:white;}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+
+
+<body>
+<div class="container">
+    
+    <main>
+        <div class="icon-bar">
+            <a class="active" href="#"><i class="fa fa-home"></i></a> 
+            <a href="#"><i class="fa fa-search"></i></a> 
+            <a href="#"><i class="fa fa-comment"></i></a> 
+            <a href="#">Explore products</a>
+            <a href="#"><i class="fa fa-trash"></i></a> 
+            <img src="images/textlogo.png" alt="logo" />
+            <button>signout</button>
+          </div>
+    </main>
+    <nav>
+        <div class="topnav">
+            <a href="#">Account</a>
+            <a href="#">Pay & transfer</a>
+            <a href="#">Collect & deposite</a>
+            <a href="#">Account management</a>
+          </div>
+    </nav>
+    <wrapbody>
+        <p>summary</p>
+        <p>Activity</p>
+    </wrapbody>
+    <sidebar>
+        <div class="mysidebar">
+        <p>LOANS & LINES OF CREDIT</p>
+        <div id="mysidebarcontent">
+        <h3>BUS CREDIT LINE</h3>
+        <h4>current balance</h4>
+        </div>
+        </div>
+
+        <div class="mysidebar">
+            <p>MERCHANT SERVICE</p>
+            <div id="mysidebarcontent">
+            <h3>MERCHANT SERVICES</h3>
+            <h4>Total sale</h4>
+            </div>
+            </div>
+
+            <div class="mysidebar">
+                <p>CREDIT CARDS</p>
+                <div id="mysidebarcontent">
+                <h3>BUSINESS CARD</h3>
+                <h4>current balance</h4>
+                </div>
+                </div>
+
+            <div class="mysidebar">
+            <div id="mysidebarcontent1">
+                <h2>Ultimate Reward</h2>
+                <h5>Use your point</h5>
+                <div class="alignright"><p>Total points</p></div>
+                
+                
+            </div> 
+            </div>
+    </sidebar>
+    <content>
+        <table>
+            <tr>
+              <th>id</th>
+                <th>discription</th>
+              
+              <th>Type</th>
+              <th>Amount</th>
+              <th>Balance</th>
+            </tr>
+            
+            <tr>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>  
+            </tr>
+            <tr>
+              <td></td>
+              </tr>
+                <tr>
+                    <td></td>
+                    
+                  </tr>
+            </tr>
+          </table>
+      </content>
+    <footer>footer</footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!Doctype html>
+<html>
+<head>
+    <style>
+
+      
+     .container{
+         display:grid;
+         height:100%;
+         grid-template-columns:1fr 1fr 1fr ;
+         grid-template-rows:0.2fr 1.0fr 1.0fr 0.2fr 0.3fr 0.3fr 0.3fr;
+         grid-template-areas:
+         "nav nav nav"
+         "main main main"
+         "maincontent maincontent maincontent"
+         "container2 container2 container2"
+         "content1 content2 content3"
+         "content4 content4 content5"
+         "footer footer footer";
+         grid-gap:0.2rem;
+         font-family: "inter", sans-serif;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-size:15px;
+            color:#004d40;
+            text-align:center;
+     }
+     
+     .contentstyle {
+        padding-top: 0%;
+     }
+     .contentstyle h1 {
+        color:black;
+     }
+     #firstcontent{
+         float:left;
+         width:30%;
+         padding:3%;
+         margin-left: 4%;
+         color:black;
+
+     }
+     #secondcontent{
+         float:left;
+         width:30%;
+         padding:3%;
+         color:black;
+     }
+     #thirdcontent{
+         float:left;
+         width:30%;
+         padding:3%;
+         color:black;
+     }
+     button {
+         padding:2%;
+         width:400px;
+         background-color: red;
+         color:white;
+         font-size:20px;
+         border-radius: 15px;
+      }
+     nav{
+        background-color: #ffffff;
+        grid-area:nav;
+     }
+     main{
+        background-color: #ffffff;
+        grid-area:main;
+        height:100%;
+     }
+     #container2{
+        background-color: #ffffff;
+        grid-area:container2;
+        height:20vh;
+     }
+     #maincontent{
+        background-color: #ffffff;
+        grid-area:maincontent;
+        height:100%;
+     }
+     #content1{
+        background-color: #ffffff;
+        grid-area:content1;
+        height:50vh;
+     }
+     #content2{
+        background-color: #ffffff;
+        grid-area:content2;
+        height:50vh;
+        }
+     #content3{
+        background-color: #ffffff;
+        grid-area:content3;
+        height:50vh;
+        }
+     #content4{
+        background-color: #19b941;
+        grid-area:content4;
+        }
+     #content5{
+        background-color: #19b941;
+        grid-area:content5;
+        }
+     footer{
+        background-color: #1519e9;
+        grid-area:footer;
+     }
+     #container2 h1{color:black}
+    .contentwrap h1{color:black;padding:1%;font-size:36px;color:green;border-bottom: 1px solid black;;}
+    .contentwrap img {float:left;padding-left: 15%;padding-top:3%;padding-bottom: 2%;}
+    #contentdisplaywrap {float:left;width:500px;padding-left: 1%;}
+    #contentdisplaywrap h2 {color:#000000;font-size: 25px;font-family: arial;text-transform: uppercase;}
+    #contentdisplaywrap p {color:#000000;font-size: 15px;font-family: arial;text-transform: none;}
+
+     *,
+     *::before,
+     *::after{
+        box-sizing:border-box;
+        -webkit-box-sizing:border-box;
+     }
+     nav {
+        height:100px;
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -ms-flex-wrap:wrap;
+        flex-wrap:wrap;
+        -webkit-box-align:center;
+        -ms-flex-align: center;
+        align-items: center;
+        overflow:hidden;
+        border-bottom: 1px solid black;
+     }
+     nav .logo {
+        max-width:250px;
+        padding:0 10px;
+        overflow:hidden;
+     }
+     nav .logo a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display:flex;
+        -ms-flex-wrap:wrap;
+        flex-wrap:wrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items:center;
+        height:100px;
+        
+     }
+     nav .navbar {
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap:wrap;
+        -webkit-box-flex:1;
+        -ms-flex:1;
+        flex:1;
+        padding:0 10px;
+     }
+     nav .navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav .navbar ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  cursor: pointer;
+  padding: 0 20px;
+}
+
+nav .navbar ul li a:hover {
+  color: #ffffff;
+  background-color: rgba(23, 23, 23, 0.9);
+}
+
+nav .navbar ul .close {
+  display: none;
+  text-align: right;
+  padding: 10px;
+}
+
+nav .navbar ul .close span {
+  font-size: 40px;
+  display: inline-block;
+  border: 1px solid #cccccc;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+nav .navbar .icon-bar {
+  padding: 18px 8px;
+  width: 50px;
+  height: 60px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+nav .navbar .icon-bar i {
+  background-color: #000000;
+  height: 2px;
+}
+
+     @media only screen and (max-width:650px){
+            .container{
+                grid-template-columns: 1fr;
+                grid-template-rows: 0.2fr 0.5fr 0.4fr 0.2fr 0.4fr 0.4fr 0.4fr 0.4fr 0.4fr 0.3fr ;
+                grid-template-areas:
+                   "nav"
+                   "main"
+                   "maincontent"
+                   "container2"
+                   "content1"
+                   "content2"
+                   "content3"
+                   "content4"
+                   "content5"
+                   "footer";
+         }
+      button {
+         padding:2%;
+         width:300px;
+         background-color: red;
+         color:white;
+         font-size:20px;
+         box-shadow:1px solid black;
+      }
+      
+      .contentwrap h1{color:black;font-size:25px;padding:0%}
+    .contentwrap img {width:100%;padding:1%;}
+    #contentdisplaywrap {width:100%;padding:0%}
+    #contentdisplaywrap h2 {color:#000000;font-size: 25px;font-family: arial;text-transform: uppercase;}
+    #contentdisplaywrap p {color:#000000;font-size: 13px;font-family: arial;text-transform: none;max-width:100%}
+    .contentstyle{
+                       
+                       
+         }
+         #firstcontent{width:100%;
+                      
+                       padding:0%;
+                       margin-left:0%;
+                       }
+        #secondcontent{width:100%;
+                       padding:0%;
+                       margin:0%;
+                       }
+        #thirdcontent{width:100%;
+                       padding:0%;
+                       } 
+         nav {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  nav .logo {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  nav .navbar {
+    -webkit-box-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+  }
+
+  nav .navbar ul {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    position: fixed;
+    left: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    -webkit-transition: left .3s;
+    -o-transition: left .3s;
+    transition: left .3s;
+  }
+
+  nav .navbar ul li a {
+    padding: 10px;
+    font-size: 16px;
+    height: auto;
+    line-height: normal;
+    color: #555555;
+  }
+
+  nav .navbar ul .close {
+    display: block;
+  }
+
+  nav .navbar .icon-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  nav .navbar ._Menus-show {
+    left: 0;
+  }
+     }
+     
+     
+    </style>
+</head>
+<body>
+    <div class ="container">
+      
+    <nav>
+       <div class="logo">
+          <a href="#"><img src="images/main-logo.png" alt="mainlogo"></a>
+       </div>
+       <div class="navbar">
+
+         <div class="icon-bar" onclick="Show()">
+             <i></i>
+             <i></i>
+             <i></i>
+         </div>
+         
+         <ul id="nav-lists">
+             <li class="close"><span onclick="Hide()">×</span></li>
+             <li><a href="#">Home</a></li>
+             <li><a href="#">Blog</a></li>
+             <li><a href="#">About</a></li>
+             <li><a href="#">Contact</a></li>
+         </ul>
+         </div>
+         <script>
+            var navList = document.getElementById("nav-lists");
+            function Show() {
+            navList.classList.add("_Menus-show");
+            }
+            
+            function Hide(){
+            navList.classList.remove("_Menus-show");
+            }
+            </script>
+            
+    </nav>
+    <main>
+      
+      <div class="contentwrap">
+        
+        <img src="images/events_single_two.jpg" alt="eventsingletwo" />
+        <div id="contentdisplaywrap">
+        <h2>Help The Needy</h2>
+        <p>We are having trouble restoring your last browsing session. Select Restore Session to try again.
+
+          Still not able to restore your session? Sometimes a tab is causing the issue. View previous tabs, 
+          remove the checkmark from the tabs you don’t need to recover, and then restore.
+          We are having trouble restoring your last browsing session. Select Restore Session to try again.
+
+          Still not able to restore your session? Sometimes a tab is causing the issue. View previous tabs, 
+          remove the checkmark from the tabs you don’t need to recover, and then restore.</p>
+          <button>click us</button>
+      </div>
+      </div>
+    </main>
+  
+    <div id="maincontent">
+      <div class="contentstyle">
+         <h1>OUR ACTIVITY</h1>
+     <div id="firstcontent">
+        <img src="images/g1.png" alt="givers" /><h2>fundraising</h2>
+     <p>Form a List. Put together a list of friends, family, co-workers, work out buddies, etc… ... Set a
+      Fundraising Goal and Continue to Raise It. Make sure you set a goal </p></div>
+      <div id="secondcontent"><img src="images/g2.png" alt="givers" /><h2>fundraising</h2>
+         <p>Form a List. Put together a list of friends, family, co-workers, work out buddies, etc… ... Set a
+          Fundraising Goal and Continue to Raise It. Make sure you set a goal </p></div>
+          <div id="thirdcontent"><img src="images/g1.png" alt="givers" /><h2>fundraising</h2>
+             <p>Form a List. Put together a list of friends, family, co-workers, work out buddies, etc… ... Set a
+              Fundraising Goal and Continue to Raise It. Make sure you set a goal </p></div>
+    </div>
+   
+    </div>
+    <div id="container2"><h1>Our Volunteers</h1></div>
+    <div id="content1">
+       <img src="images/volanteer_1.jpg" alt="ourvolunteer1" />
+       <p>micheal clafford<br>web developer</p>
+       
+    </div>
+   
+    <div id="content2">
+      <img src="images/volanteer_2.jpg" alt="ourvolunteer1" />
+      <p>micheal clafford<br>web developer</p>
+    </div>
+    <div id="content3">
+      <img src="images/volanteer_3.jpg" alt="ourvolunteer1" />
+      <p>micheal clafford<br>web developer</p>
+    </div>
+    <div id="content4">Content4</div>
+    <div id="content5">Content5</div>
+    <footer>Footer</footer>
+    </div>
+
+</body>
+</html>
